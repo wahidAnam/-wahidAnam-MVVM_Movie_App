@@ -29,11 +29,10 @@ public class MovieRepository {
             instance = new MovieRepository();
         }
         return instance;
-    }
+    } 
 
     public MutableLiveData<List<Result>> getTopRatedMovieList() {
         if (mLiveData == null) {
-
             mLiveData = new MutableLiveData();
         }
         RetrofitClient.getApiInterface().getTopRatedMovieList().enqueue(new Callback<MovieModel>() {
