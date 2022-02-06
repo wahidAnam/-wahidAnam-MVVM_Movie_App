@@ -22,18 +22,17 @@ public class MovieRepository {
     public List<Result> mResult;
     MutableLiveData mLiveData;
 
-    public static MovieRepository getInstance(Context context){
+    public static MovieRepository getInstance(Context context) {
 
-        if(instance == null){
+        if (instance == null) {
             mcontext = context;
             instance = new MovieRepository();
         }
         return instance;
     }
 
-    public MutableLiveData<List<Result>> getMovieList()
-    {
-        if(mLiveData==null){
+    public MutableLiveData<List<Result>> getTopRatedMovieList() {
+        if (mLiveData == null) {
 
             mLiveData = new MutableLiveData();
         }
@@ -42,7 +41,8 @@ public class MovieRepository {
             public void onResponse(Call<MovieModel> call, Response<MovieModel> response) {
 
                 movieModel = response.body();
-               mResult = movieModel.getResults();
+                mResult = movieModel.getResults();
+                mLiveData.postValue(mResult);
             }
 
             @Override

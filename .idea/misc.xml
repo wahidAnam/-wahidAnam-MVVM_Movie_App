@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Project/-wahidAnam-MVVM_Movie_App/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/Android Project/-wahidAnam-MVVM_Movie_App/app/src/main/res/layout/movie_row_item.xml" value="0.17552083333333332" />
         <entry key="..\:/Flutter Project/MovieApp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
       </map>
     </option>
