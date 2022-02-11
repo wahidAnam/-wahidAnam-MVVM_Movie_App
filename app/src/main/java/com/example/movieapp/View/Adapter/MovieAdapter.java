@@ -39,9 +39,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.titleTV.setText(mList.get(position).getTitle());
-        holder.ratingTV.setText(mList.get(position).getVoteAverage().toString());
-        holder.raleasedateTV.setText(mList.get(position).getReleaseDate());
+        holder.titleTV.setText("Title : "+mList.get(position).getTitle());
+        holder.ratingTV.setText("Rating : "+mList.get(position).getVoteAverage().toString());
+        holder.raleasedateTV.setText("Release date: "+mList.get(position).getReleaseDate());
 
         Glide.with(context).load("https://image.tmdb.org/t/p/w500/"+mList.get(position).getPosterPath()).into(holder.avatarID);
 
